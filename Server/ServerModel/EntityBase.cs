@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Server
+namespace ServerModel
 {
-    class EntityBase
+    public class EntityBase
     {
         // 组件列表，未实现RTTI，故用string做索引
         // 如果有RTTI，可以直接存储List<ComponentBase>，并且大多是这么做的
-        Dictionary<string, ComponentBase> ComponentArray = new Dictionary<string, ComponentBase>();
+        public Dictionary<Type, ComponentBase> ComponentArray = new Dictionary<Type, ComponentBase>();
 
         // 通过此函数将消息分发给各个Component，各个Component各自处理此消息
         // 通过DisptachEvetn，每个Compoent都会收到此消息，但是否处理此消息，由各组件自己决定
@@ -28,7 +28,7 @@ namespace Server
             return bHandled;
         }
 
-        public bool AddComponent(string compName, ComponentBase compObject)
+        public bool AddComponent(Type compName, ComponentBase compObject)
         {
             if (compObject == null)
             {
@@ -43,7 +43,7 @@ namespace Server
             return true;
         }
 
-        public bool RemoveComponent(string compName)
+        public bool RemoveComponent(Type compName)
         {
             if (!ComponentArray.ContainsKey(compName))
             {

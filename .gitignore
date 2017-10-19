@@ -18,3 +18,7 @@ bin-release/
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
 Server/Server/obj/
+Server/ServerModel/obj/
+Server/ServerHotfix/obj/
+Client/Client/obj/
+Client/.vs/

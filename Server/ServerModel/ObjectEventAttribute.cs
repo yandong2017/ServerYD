@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Server
+namespace ServerModel
 {
-    public enum EventDefines
+    public class ObjectEventAttribute : Attribute
     {
-        Event_01 = 0,
-        Event_02,
-        Event_03,
     }
 }

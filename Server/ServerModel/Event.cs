@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Server
+namespace ServerModel
 {
-    class Event
+    public class Event
     {
         public int EventID = -1;
         public ArrayList EventArgs = new ArrayList();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServerModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Server
 {
+    [ObjectEvent]
     class TestComponent : ComponentBase
     {
         public override void OnAttachToEntity(EntityBase ety)
@@ -25,7 +27,7 @@ namespace Server
         private void DealEvent01(Event evt)
         {
             string evtData = evt.GetUserData<string>(0);
-            Console.WriteLine("TestComponent Handle Event: ID = " + evt.EventID.ToString());
+            Console.WriteLine("TestComponent Handle Evendadadadadadat: ID = " + evt.EventID.ToString());
             Console.WriteLine("TestComponent Handle Event: Data = " + evtData);
         }
 

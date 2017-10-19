@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Server
+namespace ServerModel
 {
-    class ComponentBase
+    public class ComponentBase
     {
-        protected delegate void EventHandleFunction(Event evt);
-
+        public delegate void EventHandleFunction(Event evt);
+                
         private EntityBase Owner = null;
         // 事件映射表
         private Dictionary<int, EventHandleFunction> EventHandlerMap = new Dictionary<int, EventHandleFunction>();
